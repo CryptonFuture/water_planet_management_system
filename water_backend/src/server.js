@@ -29,7 +29,7 @@ app.use('/api/alerts', require('./routes/alertRoutes'));
 app.use('/api/maintenance', require('./routes/maintenanceRoutes'));
 app.use('/api/dashboard', require('./routes/dashboardRoutes'));
 
-app.get('/api/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ success: true, message: 'Water Plant Management API is running', timestamp: new Date() });
 });
 
