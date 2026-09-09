@@ -1,0 +1,566 @@
+/* =========================================
+   PREMIUM CHEMICAL INVENTORY
+========================================= */
+
+.chemicals-page {
+  width: 100%;
+}
+
+/* Header */
+
+.chemicals-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+  margin-bottom: 22px;
+  padding: 20px 22px;
+
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.05);
+}
+
+.chemicals-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.chemicals-title-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0284c7;
+  background: #e0f2fe;
+
+  border-radius: 14px;
+}
+
+.chemicals-title h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.chemicals-title p {
+  margin: 4px 0 0;
+
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+/* Summary */
+
+.inventory-summary {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 9px 13px;
+
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+}
+
+.summary-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0284c7;
+  background: #e0f2fe;
+
+  border-radius: 9px;
+}
+
+.inventory-summary strong {
+  display: block;
+
+  color: #0f172a;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.inventory-summary span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #64748b;
+  font-size: 0.63rem;
+}
+
+/* Card */
+
+.chemical-card {
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(15, 23, 42, 0.045);
+}
+
+/* Card header */
+
+.chemical-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 19px 21px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.chemical-card-header h3 {
+  margin: 0;
+
+  color: #0f172a;
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.chemical-card-header p {
+  margin: 4px 0 0;
+
+  color: #94a3b8;
+  font-size: 0.7rem;
+}
+
+.inventory-count {
+  padding: 6px 10px;
+
+  color: #0369a1;
+  background: #f0f9ff;
+
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+/* Table */
+
+.chemical-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.chemical-table {
+  width: 100%;
+  min-width: 850px;
+
+  border-collapse: collapse;
+}
+
+.chemical-table thead {
+  background: #f8fafc;
+}
+
+.chemical-table th {
+  padding: 12px 18px;
+
+  color: #64748b;
+
+  font-size: 0.63rem;
+  font-weight: 800;
+
+  text-align: left;
+  letter-spacing: 0.45px;
+
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.chemical-table td {
+  padding: 14px 18px;
+
+  color: #475569;
+
+  font-size: 0.76rem;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  vertical-align: middle;
+}
+
+.chemical-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.chemical-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.chemical-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Chemical name */
+
+.chemical-name {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.chemical-icon {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0284c7;
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+}
+
+.chemical-name strong {
+  display: block;
+
+  color: #1e293b;
+
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.chemical-name span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #94a3b8;
+
+  font-size: 0.63rem;
+  font-weight: 600;
+}
+
+/* Category */
+
+.category-pill {
+  display: inline-flex;
+
+  padding: 5px 9px;
+
+  color: #475569;
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  text-transform: capitalize;
+}
+
+/* Quantity */
+
+.quantity-cell {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.quantity-cell strong {
+  color: #0f172a;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.quantity-cell span {
+  color: #94a3b8;
+  font-size: 0.62rem;
+}
+
+.stock-progress {
+  width: 80px;
+  height: 4px;
+
+  margin-top: 7px;
+
+  overflow: hidden;
+
+  background: #e2e8f0;
+
+  border-radius: 99px;
+}
+
+.stock-progress-bar {
+  height: 100%;
+
+  border-radius: 99px;
+
+  transition: width 0.4s ease;
+}
+
+.stock-progress-bar.available {
+  background: #10b981;
+}
+
+.stock-progress-bar.low {
+  background: #f59e0b;
+}
+
+.stock-progress-bar.out,
+.stock-progress-bar.expired {
+  background: #ef4444;
+}
+
+/* Min stock */
+
+.min-stock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #64748b;
+
+  font-size: 0.7rem;
+}
+
+.min-stock svg {
+  color: #94a3b8;
+}
+
+/* Plant */
+
+.plant-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #475569;
+
+  font-size: 0.7rem;
+}
+
+.plant-cell svg {
+  color: #0284c7;
+}
+
+.no-data {
+  color: #cbd5e1;
+}
+
+/* Status */
+
+.chemical-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 0.63rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.chemical-status.available {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+.chemical-status.low {
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.chemical-status.out,
+.chemical-status.expired {
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.chemical-status.unknown {
+  color: #475569;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+/* Empty */
+
+.chemical-empty {
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  padding: 35px;
+}
+
+.chemical-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  color: #0284c7;
+  background: #eff6ff;
+
+  border: 1px solid #dbeafe;
+  border-radius: 20px;
+}
+
+.chemical-empty h3 {
+  margin: 0 0 6px;
+
+  color: #0f172a;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.chemical-empty p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: #94a3b8;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Loading */
+
+.chemicals-loading {
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 10px;
+
+  color: #64748b;
+  font-size: 0.78rem;
+}
+
+.chemicals-loader {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0284c7;
+  background: #eff6ff;
+
+  border-radius: 14px;
+
+  animation: chemicalPulse 1.2s ease-in-out infinite;
+}
+
+.chemicals-loader svg {
+  animation: chemicalSpin 1s linear infinite;
+}
+
+@keyframes chemicalSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes chemicalPulse {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .chemicals-header {
+    align-items: flex-start;
+    padding: 17px;
+  }
+
+  .chemicals-title {
+    align-items: flex-start;
+  }
+
+  .chemicals-title-icon {
+    width: 41px;
+    height: 41px;
+  }
+
+  .chemicals-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .chemicals-title p {
+    font-size: 0.69rem;
+  }
+
+  .inventory-summary {
+    padding: 7px 9px;
+  }
+
+  .chemical-card-header {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .chemicals-header {
+    flex-direction: column;
+  }
+
+  .inventory-summary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chemical-card {
+    border-radius: 14px;
+  }
+
+  .chemical-card-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
